@@ -1,0 +1,71 @@
+.footer {
+
+    &__nav {
+        font-weight: normal;
+        font-size: 16px;
+        @include media(md) {
+            margin: 0 0 12px 0;
+        }
+
+        > li {
+
+            &:not(:last-child) {
+                margin: 0 0 12px 0;
+            }
+
+            a {
+                color: #fff;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $color-blue;
+                }
+
+            }
+
+            &.italic {
+                font-style: italic;
+                font-family: $font-karla;
+                @include media(md) {
+                    padding-top: 20px;
+                }
+
+                > a {
+                    color: #7DAED3;
+                }
+            }
+
+        }
+
+        &-bottom {
+            @include _flexbox();
+            @include _justify-content(center);
+            font-size: 15px;
+            @include media(md) {
+                @include _justify-content(space-between);
+            }
+
+            > li {
+                padding: 0 40px;
+                @include media(md) {
+                    padding: 0;
+                }
+
+                a {
+                    color: #7DAED3;
+                    font-family: $font-karla;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: $color-blue;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

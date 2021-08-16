@@ -1,0 +1,83 @@
+/**
+ * Breakpoints
+ */
+$breakpoints: (
+        xxs: 440px,
+        xs: 500px,
+        sm: 767px,
+        md: 991px,
+        lg: 1200px,
+        xl: 1400px,
+
+);
+
+
+/**
+ * Body
+ */
+$font-body                      :   'IBM Plex Sans', sans-serif;
+$font-karla                     :   'Karla', sans-serif;
+
+$color-body                     :   #41637D;
+$color-h                        :   #141316;
+$textSize-body                  :   16px;
+$textLineHeight-body            :   24px;
+$backgroundColor-body           :   #fcfbf9;
+$fontWeight-body                :   400;
+
+$textSize-body-medium           :   14px;
+$textLineHeight-body-medium     :   22px;
+
+/**
+ * Container
+ */
+$container-padding              :   30px;
+$container-maxWidth             :   1430px;
+/**
+ * Link
+ */
+$color-link                     :   #1084DD;
+
+/**
+ * Background
+ */
+$background-blue                :   #1084DD;
+$background-green               :   #95C11F;
+/**
+ * Colors
+ */
+
+$color-primary      :   #1C9DE3;
+$color-secondary    :   #0B2837;
+$color-blue         :   #1084DD;
+$color-blue-dark    :   #133C52;
+$color-blue-light   :   #39A4F5;
+$color-black        :   #141316;
+$color-dark-alt     :   #292929;
+$color-gray         :   #DADADA;
+$color-gray-light   :   #F2F1F1;
+$color-gray-dark    :   #909090;
+$color-yellow       :   #FBBC04;
+$color-text         :   #ACACAC;
+$color-white        :   #fff;
+$color-light        :   #E7E5E5;
+$color-red          :   #ff4747;
+$color-red-strong   :   #67062a;
+$color-green        :   #00CC33;
+$color-purple       :   #7C62E3;
+$color-pink         :   #e01d4f;
+
+/**
+ * Border
+ */
+$border-radius          : 0px;
+
+/**
+ * Form and Btn
+ */
+$inp-height     : 55px;
+$inp-height-sm  : 40px;
+$inp-height-xs  : 30px;
+$inp-border-color: #F0F3F4;
+$inp-background: #F0F3F4;
+

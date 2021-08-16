@@ -1,0 +1,161 @@
+/**
+ * Classes Buttons
+ *
+ * btn
+ * btn-opacity
+ * btnWrap
+ *
+ */
+
+.btn {
+    @include _flexinline();
+    @include _align-items(center);
+    @include _justify-content(center);
+    font-family: $font-body;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-color: $background-blue;
+    border: 1px solid transparent;
+    color: #fff !important;
+    white-space: nowrap;
+    padding: 0px 40px;
+    height: $inp-height;
+    font-size: 15px;
+    line-height: 1.42857143;
+    border-radius: 999px;
+    user-select: none;
+    position: relative;
+    text-decoration: none;
+    transition: all .15s linear;
+
+    &:hover {
+        color: #fff;
+        border-color: $background-blue;
+        opacity: .85;
+    }
+
+    &-opacity {
+        background: none;
+        color: $color-blue !important;
+        border-color: $background-blue;
+
+
+        &:hover {
+            color: #fff !important;
+            border-color: $background-blue;
+            background-color: $background-blue;
+            opacity: 1.0;
+        }
+    }
+
+    &-sm {
+        height: $inp-height-sm;
+        padding: 0px 21px;
+        font-weight: normal;
+        font-family: $font-karla;
+        @include media(md) {
+            font-size: 14px;
+            padding: 0px 24px;
+        }
+    }
+
+    &-loading {
+        position: absolute;
+        bottom: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        i {
+            -webkit-animation-name: opacity-ellipsis;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-name: opacity-ellipsis;
+            -moz-animation-duration: 1s;
+            -moz-animation-iteration-count: infinite;
+            -ms-animation-name: opacity-ellipsis;
+            -ms-animation-duration: 1s;
+            -ms-animation-iteration-count: infinite;
+
+            &:nth-child(2) {
+                -webkit-animation-delay: 100ms;
+                animation-delay: 100ms;
+            }
+
+            &:nth-child(3) {
+                -webkit-animation-delay: 300ms;
+                animation-delay: 300ms;
+            }
+
+        }
+    }
+
+    &-play {
+        $size: 65px;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background-color: $background-blue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -#{$size/2};
+        margin-left: -#{$size/2};
+        z-index: 2;
+        padding: 0;
+        display: block;
+        transition: transform .18s linear;
+        will-change: transform;
+        cursor: pointer;
+
+        @include media(md) {
+            $size: 40px;
+            width: $size;
+            height: $size;
+            margin-top: -#{$size/2};
+            margin-left: -#{$size/2};
+        }
+
+        &::after {
+            content: '';
+            border: 10px solid transparent;
+            border-left: 14px solid #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            z-index: 3;
+            margin-left: 6px;
+            @include media(md) {
+                border: 6px solid transparent;
+                border-left: 8px solid #fff;
+                margin-left: 4px;
+            }
+        }
+
+    }
+
+    &.waiting {
+        opacity: .75;
+
+    }
+
+}
+
+@keyframes opacity-ellipsis {
+    0% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
+    100% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+    }
+}
+
+.btnWrap {
+    text-align: center;
+    margin-top: 55px;
+}

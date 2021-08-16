@@ -1,0 +1,45 @@
+@import url('../css/plugins/font-awesome.css');
+@import url('../css/plugins/swiper-bundle.css');
+@import url('../css/plugins/select2.css');
+
+/**
+ * Variables
+ */
+@import "base/variables";
+
+/**
+ * Mixins
+ */
+@import "base/mixins";
+
+/**
+ * Global
+ */
+@import "base/fonts";
+@import "base/normalize";
+@import "base/utilities";
+@import "layout/bootstrap/bootstrap";
+@import "base/base";
+
+/**
+ * Modules
+ */
+@import "modules/swiper";
+@import "modules/btn";
+@import "modules/form";
+@import "modules/text";
+
+/**
+ * Layout
+ */
+@import "layout/wrapper";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+
+
+/**
+ * Pages
+ */
+@import "pages/home";

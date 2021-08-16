@@ -1,0 +1,265 @@
+.form {
+
+    label, .wpcf7-list-item-label {
+        display: block;
+        -webkit-tap-highlight-color: transparent;
+        &:focus, &:active, &:hover {
+            background-color: transparent;
+
+        }
+    }
+
+    fieldset {
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    &-group {
+        margin: 0 0 26px 0;
+        position: relative;
+        @include media(md) {
+            margin: 0 0 25px 0;
+        }
+
+        &:focus{
+
+        }
+
+        &-nomatgin {
+            margin: 0;
+        }
+
+    }
+
+    &-control {
+        display: block;
+        width: 100%;
+        line-height: 1.42857143;
+        background: $inp-background;
+        border: 1px solid $inp-border-color;
+        border-radius: 0px;
+        color: $color-black;
+        padding: 15px 27px;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        position: relative;
+        z-index: 1;
+        font-size: 20px;
+        font-family: $font-karla;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        @include media(md) {
+            padding: 16px 27px;
+            font-size: 16px;
+        }
+        @include media(sm) {
+            padding: 16px 16px;
+        }
+
+        &:not(textarea) {
+            height: $inp-height;
+            @include media(sm) {
+                height: 60px;
+            }
+
+            &.input-sm{
+                height: $inp-height-sm;
+            }
+
+        }
+
+        &:focus{
+            border-color: $background-blue !important;
+            background-color: #fff;
+        }
+
+        @include placeholder {
+            color: #828385;
+            opacity: 1.0;
+        };
+
+        &:focus{
+            border-color: $background-blue;
+        }
+
+
+        &-sm {
+            &:not(textarea) {
+                height: $inp-height-sm;
+            }
+        }
+        &-xs {
+            &:not(textarea) {
+                height: $inp-height-xs;
+            }
+        }
+
+
+
+    }
+    textarea, select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    textarea {
+        resize: none;
+    }
+
+    select {
+        width: 100% !important;
+    }
+
+    &-checkbox, .wpcf7-checkbox {
+        padding: 12px 0 0 0;
+        display: inline-block;
+
+        input {
+            position: absolute;
+            z-index: -1000;
+            left: -1000px;
+
+            + span {
+                display: block;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 23px;
+                line-height: 1.5;
+                position: relative;
+                padding: 6px 0 0 65px;
+                color: $color-body;
+                font-family: $font-karla;
+                @include media(sm) {
+                    font-family: $font-body;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding: 0px 0 0 40px;
+
+                }
+
+                &::before {
+                    $size: 45px;
+                    content: '';
+                    display: block;
+                    width: $size;
+                    height: $size;
+                    border: 2px solid #E9EDF0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: calc(#{$size} - 4px);
+                    color: #fff;
+                    background: $inp-background;
+                    @include media(sm) {
+                        $size: 24px;
+                        width: $size;
+                        height: $size;
+                        border: none;
+                        line-height: $size + 2px;
+                        font-size: 11px;
+                    }
+                }
+
+            }
+
+            &[type="checkbox"] {
+                -webkit-tap-highlight-color: transparent;
+
+                &:checked {
+
+                    + span {
+
+                        &::before {
+                            background: $background-blue url('../images/check-white.svg') center center no-repeat;
+                            background-size: 40%;
+                            border-color: $background-blue;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    &-radion, .wpcf7-radio {
+
+        .wpcf7-list-item {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 60px;
+                @include media(md) {
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        input {
+            position: absolute;
+            z-index: -1000;
+            left: -1000px;
+
+            + span {
+                display: inline-block;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.5;
+                position: relative;
+                padding: 0px 0 0 22px;
+                color: #888788;
+                font-family: $font-karla;
+                white-space: nowrap;
+                @include media(md) {
+                    line-height: 1.1;
+                }
+
+                &::before {
+                    $size: 13px;
+                    content: '';
+                    display: block;
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: #D3DADD;
+                    top: 50%;
+                    margin-top: -#{$size/2+1px};
+                }
+
+            }
+
+            &[type="radio"] {
+
+                &:checked {
+
+                    + span {
+                        color: $color-black;
+
+                        &::before {
+                            background-color: $background-blue;
+                            border-color: $background-blue;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+}

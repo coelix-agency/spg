@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    text-rendering: optimizeLegibility;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: $font-body;
+    font-weight: normal;
+    color: $color-body;
+    font-size: $textSize-body;
+    line-height: $textLineHeight-body;
+    background-color: $backgroundColor-body;
+    -webkit-text-size-adjust: none;
+    min-height: 100%;
+    position: relative;
+    font-weight: $fontWeight-body;
+
+
+    &.menu__active{
+        overflow: hidden;
+    }
+
+    @include media(md) {
+        font-size: $textSize-body-medium;
+        line-height: $textLineHeight-body-medium;
+    }
+
+}
+html {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+}
+a {
+    color: $color-link;
+    text-decoration: none;
+    outline: none !important;
+    position: relative;
+}
+a:hover {
+    text-decoration: none;
+    color: $color-link;
+    border-bottom-color: transparent;
+}
+a:active, a:visited {
+    text-decoration: none !important;
+    color: $color-link;
+    border-bottom-color: transparent;
+}
+ol, ul {
+    list-style: none;
+    counter-reset: point;
+    margin: 0;
+    padding: 0;
+}
+ol > li,
+ul > li {
+    position: relative;
+}
+ol > li::before {
+    content: counter(point);
+    counter-increment: point 1;
+}
+p {
+    padding: 0;
+    margin: 0 0 35px 0;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+#container {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+    max-width: $container-maxWidth;
+    width: 100%;
+    @include media(sm) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+header, footer, article, section, nav, main {
+    position: relative;
+}
+/**
+ * H1 - H6
+ */
+@for $i from 1 through 6 {
+    h#{$i}, .h#{$i} {
+        color: $color-h;
+        margin: 0 0 35px 0;
+        font-weight: bold;
+        position: relative;
+
+        i {
+            font-style: normal;
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: normal;
+            position: relative;
+            top: -10px;
+            left: -4px;
+            @include media(md) {
+                display: none;
+                //font-size: 20px;
+                //line-height: 20px;
+                //top: -5px;
+                //left: -1px;
+            }
+        }
+
+
+        @include media(md) {
+            margin: 0 0 30px 0;
+        }
+
+        span, strong {
+            color: $color-blue;
+        }
+
+    }
+}
+h1, .h1{
+    font-size: 40px;
+    line-height: 50px;
+    @include media(md) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+h2, .h2{
+    font-size: 39px;
+    line-height: 44px;
+    @include media(md) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+h3, .h3{
+    font-size: 34px;
+    line-height: 42px;
+    @include media(md) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+h4, .h4{
+    font-size: 30px;
+    line-height: 38px;
+    @include media(md) {
+        font-size: 19px;
+        line-height: 27px;
+    }
+}
+h5, .h5{
+    font-size: 24px;
+    line-height: 32px;
+
+    @include media(md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+h6, .h6{
+    font-size: 18px;
+    line-height: 24px;
+
+    @include media(md) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+iframe {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    background: #fff url('../images/video-preloader.gif') center center no-repeat;
+    background-size: 80px;
+    @include media(md) {
+        background-size: 45px;
+    }
+}

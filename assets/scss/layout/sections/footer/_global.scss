@@ -1,0 +1,9 @@
+.footer {
+    flex: 0 0 auto;
+    position: relative;
+
+    @include media(md) {
+        transform: translateY(2px);
+    }
+
+}

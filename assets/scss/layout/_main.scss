@@ -1,0 +1,11 @@
+main {
+    z-index: 1;
+
+    @include media(md) {
+        padding-top: 105px;
+    }
+
+}
+
+
+
